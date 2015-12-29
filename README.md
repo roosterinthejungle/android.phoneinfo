@@ -9,6 +9,7 @@ Documentation
 -------------
 
 The main class to get infor is: com.roosterinthejungle.tools.phoneinfo.PhoneInfo.
+
 Notice the class com.roosterinthejungle.tools.phoneinfo.MainActivity.GlRenderer is used to get GPU information.
 
 Tested on (emulator):
