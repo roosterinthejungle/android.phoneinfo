@@ -141,8 +141,8 @@ public class HardwarePage extends BasePage {
 
         // panel cpu
         panel = createPanel(getString(R.string.lb_panel_cpu));
-        addRow(panel, getString(R.string.lb_cpu_type), mPhoneInfo.getCpuType(), true);
-        addRow(panel, getString(R.string.lb_cpu_vendor), mPhoneInfo.getCpuVendor(), true);
+        addRow(panel, getString(R.string.lb_cpu_processor), mPhoneInfo.getCpuProcessor(), true);
+        addRow(panel, getString(R.string.lb_cpu_implementer), mPhoneInfo.getCpuImplementer(), true);
         addRow(panel, getString(R.string.lb_cpu_part), mPhoneInfo.getCpuPart(), true);
         addRow(panel, getString(R.string.lb_cpu_cores), "" + mPhoneInfo.getCpuCores(), true);
         addRow(panel, getString(R.string.lb_cpu_frequency), mPhoneInfo.getCpuMinFrequency() / 1000 + " MHz" + " - " + mPhoneInfo.getCpuMaxFrequency() / 1000 + " MHz", false);

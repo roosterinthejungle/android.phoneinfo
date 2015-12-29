@@ -37,8 +37,8 @@
 
     <!-- For tab: Hardware -->
     <string name="lb_panel_cpu">CPU</string>
-    <string name="lb_cpu_type">Type</string>
-    <string name="lb_cpu_vendor">Vendor</string>
+    <string name="lb_cpu_processor">Processor</string>
+    <string name="lb_cpu_implementer">Implementer</string>
     <string name="lb_cpu_part">Part</string>
     <string name="lb_cpu_cores">Core(s)</string>
     <string name="lb_cpu_frequency">Frequency</string>

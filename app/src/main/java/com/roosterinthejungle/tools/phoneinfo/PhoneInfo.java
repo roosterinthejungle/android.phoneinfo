@@ -39,14 +39,14 @@ import java.util.regex.Pattern;
 
 /**
  * Extract device information.
- *
+ * <p/>
  * Require permissions:
- *      android.permission.READ_PHONE_STATE
- *      android.permission.CAMERA
- *      android.permission.ACCESS_NETWORK_STATE
- *      android.permission.ACCESS_WIFI_STATE
- *
- *
+ * android.permission.READ_PHONE_STATE
+ * android.permission.CAMERA
+ * android.permission.ACCESS_NETWORK_STATE
+ * android.permission.ACCESS_WIFI_STATE
+ * <p/>
+ * <p/>
  * Created by hhhung on September 4, 2015
  */
 public class PhoneInfo {
@@ -124,7 +124,7 @@ public class PhoneInfo {
         } catch (Exception ex) {
         }
 
-        return Utils.readFile("/sys/class/net/" +interfaceName + "/address").toUpperCase().trim();
+        return Utils.readFile("/sys/class/net/" + interfaceName + "/address").toUpperCase().trim();
     }
 
     /**
@@ -337,29 +337,31 @@ public class PhoneInfo {
     public String getKernelVersion() {
         String procVersionStr = Utils.readFile("/proc/version");
 
-        final String PROC_VERSION_REGEX =
-                "\\w+\\s+" + /* ignore: Linux */
-                        "\\w+\\s+" + /* ignore: version */
-                        "([^\\s]+)\\s+" + /* group 1: 2.6.22-omap1 */
-                        "\\(([^\\s@]+(?:@[^\\s.]+)?)[^)]*\\)\\s+" + /* group 2: (xxxxxx@xxxxx.constant) */
-                        "\\((?:[^(]*\\([^)]*\\))?[^)]*\\)\\s+" + /* ignore: (gcc ..) */
-                        "([^\\s]+)\\s+" + /* group 3: #26 */
-                        "((\\w+\\s+){1,2})" + /* group 4: [SMP] PREEMPT */
-                        ".+"; /* group 5: date */
+        return procVersionStr;
 
-        Matcher m = Pattern.compile(PROC_VERSION_REGEX, Pattern.CASE_INSENSITIVE).matcher(procVersionStr);
-
-        if (m.matches() && m.groupCount() >= 4) {
-            return (m.group(1) + "\n" + m.group(2) + " " + m.group(3) + "\n" + m.group(4).trim()).trim();
-        } else {
-            return null;
-        }
+//        final String PROC_VERSION_REGEX =
+//                "\\w+\\s+" + /* ignore: Linux */
+//                        "\\w+\\s+" + /* ignore: version */
+//                        "([^\\s]+)\\s+" + /* group 1: 2.6.22-omap1 */
+//                        "\\(([^\\s@]+(?:@[^\\s.]+)?)[^)]*\\)\\s+" + /* group 2: (xxxxxx@xxxxx.constant) */
+//                        "\\((?:[^(]*\\([^)]*\\))?[^)]*\\)\\s+" + /* ignore: (gcc ..) */
+//                        "([^\\s]+)\\s+" + /* group 3: #26 */
+//                        "((\\w+\\s+){1,2})" + /* group 4: [SMP] PREEMPT */
+//                        ".+"; /* group 5: date */
+//
+//        Matcher m = Pattern.compile(PROC_VERSION_REGEX, Pattern.CASE_INSENSITIVE).matcher(procVersionStr);
+//
+//        if (m.matches() && m.groupCount() >= 4) {
+//            return (m.group(1) + "\n" + m.group(2) + " " + m.group(3) + "\n" + m.group(4).trim()).trim();
+//        } else {
+//            return null;
+//        }
     }
 
     /**
-     * Return CPU type
+     * Return CPU processor
      */
-    public String getCpuType() {
+    public String getCpuProcessor() {
         String cpuInfo = Utils.readFile("/proc/cpuinfo");
 
         Matcher m = Pattern.compile("Processor[\\s\\t]*:[\\s\\t]*(.*)", Pattern.CASE_INSENSITIVE).matcher(cpuInfo);
@@ -372,11 +374,10 @@ public class PhoneInfo {
     }
 
     /**
-     * Return CPU vendor
-     *
-     * @TODO need to add missing vendor
+     * Return CPU implementer
      */
-    public String getCpuVendor() {
+    // @TODO need to add missing implementer
+    public String getCpuImplementer() {
         String cpuInfo = Utils.readFile("/proc/cpuinfo");
 
         Matcher m = Pattern.compile("CPU implementer[\\s\\t]*:[\\s\\t]*(.*)", Pattern.CASE_INSENSITIVE).matcher(cpuInfo);
@@ -407,8 +408,8 @@ public class PhoneInfo {
 
     /**
      * Return part of the CPU
-     * @TODO need to add missing part
      */
+    // @TODO need to add missing part
     public String getCpuPart() {
         String cpuInfo = Utils.readFile("/proc/cpuinfo");
 
@@ -656,7 +657,6 @@ public class PhoneInfo {
     }
 
     /**
-     *
      * @param camId
      * @return total megapixel
      */
