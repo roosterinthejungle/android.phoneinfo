@@ -8,9 +8,9 @@ A simple Android application to display device information.
 Documentation
 -------------
 
-The main class to get infor is: com.roosterinthejungle.tools.phoneinfo.PhoneInfo.
+The main class to get device info is: com.roosterinthejungle.tools.phoneinfo.PhoneInfo.
 
-Notice the class com.roosterinthejungle.tools.phoneinfo.MainActivity.GlRenderer is used to get GPU information.
+*Notice that the class com.roosterinthejungle.tools.phoneinfo.MainActivity.GlRenderer is used to get GPU information.*
 
 Tested on (emulator):
  + API 23 (Marshmallow, Android 6.0)
