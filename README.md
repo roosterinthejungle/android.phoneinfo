@@ -8,6 +8,8 @@ A simple Android application to display device information.
 Documentation
 -------------
 
+Generated apk file is under "release" directory.
+
 The main class to get device info is: com.roosterinthejungle.tools.phoneinfo.PhoneInfo.
 
 *Notice that the class com.roosterinthejungle.tools.phoneinfo.MainActivity.GlRenderer is used to get GPU information.*
