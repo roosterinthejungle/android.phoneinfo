@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Phone Info</string>
+
+    <!-- For tab: General -->
+    <string name="lb_panel_device_label">LABEL</string>
+    <string name="lb_manufacturer">Manufacturer</string>
+    <string name="lb_model">Model</string>
+    <string name="lb_codename">Codename</string>
+
+
+    <string name="lb_panel_identity">IDENTITY</string>
+    <string name="lb_imei">IMEI</string>
+    <string name="lb_imsi">IMSI</string>
+    <string name="lb_serial_number">Serial Number</string>
+    <string name="lb_phone_number">Phone Number</string>
+    <string name="lb_ip">IP</string>
+    <string name="lb_wifi_mac">Wi-Fi MAC</string>
+
+    <string name="lb_panel_network_operator">MOBILE NETWORK OPERATOR</string>
+    <string name="lb_network_operator_code">Operator Code</string>
+    <string name="lb_network_operator_name">Operator Name</string>
+    <string name="lb_phone_type">Phone Type</string>
+
+    <!-- For tab: Software -->
+    <string name="lb_panel_android">ANDROID</string>
+    <string name="lb_android_version">Version</string>
+    <string name="lb_android_build">Build Version</string>
+    <string name="lb_android_build_fingerprint">Build Fingerprint</string>
+    <string name="lb_android_build_time">Build Time</string>
+    <string name="lb_android_sdk_int">SDK Version</string>
+
+    <string name="lb_panel_more">MORE</string>
+    <string name="lb_kernel_version">Kernel Version</string>
+    <string name="lb_baseband">Baseband Version</string>
+    <string name="lb_board">Board</string>
+    <string name="lb_bootloader">Bootloader</string>
+
+    <!-- For tab: Hardware -->
+    <string name="lb_panel_cpu">CPU</string>
+    <string name="lb_cpu_type">Type</string>
+    <string name="lb_cpu_vendor">Vendor</string>
+    <string name="lb_cpu_part">Part</string>
+    <string name="lb_cpu_cores">Core(s)</string>
+    <string name="lb_cpu_frequency">Frequency</string>
+
+    <string name="lb_panel_display">DISPLAY</string>
+    <string name="lb_dimension">Dimensions</string>
+    <string name="lb_resolution">Resolution</string>
+    <string name="lb_density">Density</string>
+    <string name="lb_gpu_renderer">GPU Renderer</string>
+    <string name="lb_gpu_vendor">GPU Vendor</string>
+    <string name="lb_gl_version">OpenGL Version</string>
+
+    <string name="lb_panel_battery">BATTERY</string>
+    <string name="lb_battery_technology">Technology</string>
+    <string name="lb_battery_present">Present</string>
+    <string name="lb_battery_max_level">Max Level</string>
+    <string name="lb_battery_health">Health</string>
+
+    <string name="lb_panel_memory">MEMORY</string>
+    <string name="lb_ram">RAM</string>
+    <string name="lb_internal_storage">Internal Storage</string>
+    <string name="lb_external_storage">External Storage</string>
+
+    <string name="lb_panel_camera">CAMERA</string>
+    <string name="lb_back">Back</string>
+    <string name="lb_front">Front</string>
+
+    <!-- For tab: Status -->
+    <string name="lb_panel_cpu_load">CPU LOAD</string>
+    <string name="lb_cpu_load_total">Total</string>
+    <string name="lb_cpu_procs">Processes</string>
+    <string name="btn_apps_manager">Apps Manager</string>
+
+    <string name="lb_panel_memory_usage">MEMORY USAGE</string>
+
+    <string name="lb_panel_battery_status">BATTERY STATUS</string>
+    <string name="lb_battery_level">Level</string>
+    <string name="lb_battery_charge_status">Charge Status</string>
+    <string name="lb_battery_power_source">Power Source</string>
+    <string name="lb_battery_temperature">Temperature</string>
+    <string name="lb_battery_voltage">Voltage</string>
+    <string name="btn_battery_usage">Battery Usage</string>
+
+    <string name="lb_panel_wifi">WI-FI</string>
+    <string name="lb_wifi_status">Status</string>
+    <string name="lb_wifi_network">Network</string>
+    <string name="lb_wifi_ip">Local IP</string>
+    <string name="lb_wifi_link_speed">Link Speed</string>
+
+    <string name="lb_sim_status">SIM Status</string>
+    <string name="lb_mobile_data_status">Mobile Data</string>
+    <string name="lb_mobile_data_type">Data Type</string>
+    <string name="lb_mobile_data_roaming">Roaming</string>
+</resources>

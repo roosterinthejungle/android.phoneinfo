@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_id_general">tab_general</string>
+    <string name="tab_id_status">tab_status</string>
+    <string name="tab_id_software">tab_software</string>
+    <string name="tab_id_hardware">tab_hardware</string>
+
+
+    <string name="tab_title_general">GENERAL</string>
+    <string name="tab_title_status">STATUS</string>
+    <string name="tab_title_software">SOFTWARE</string>
+    <string name="tab_title_hardware">HARDWARE</string>
+</resources>
