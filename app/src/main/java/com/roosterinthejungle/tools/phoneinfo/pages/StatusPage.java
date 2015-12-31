@@ -17,6 +17,7 @@
 package com.roosterinthejungle.tools.phoneinfo.pages;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -24,6 +25,7 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
@@ -32,6 +34,7 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.roosterinthejungle.tools.phoneinfo.R;
 import com.roosterinthejungle.tools.phoneinfo.Utils;
@@ -342,7 +345,11 @@ public class StatusPage extends BasePage {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.startActivity(getActivity(), new Intent(Settings.ACTION_APPLICATION_SETTINGS));
+                try {
+                    getActivity().startActivity(new Intent(Settings.ACTION_APN_SETTINGS));
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "Cannot open Application Settings", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -366,7 +373,11 @@ public class StatusPage extends BasePage {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.startActivity(getActivity(), new Intent(Intent.ACTION_POWER_USAGE_SUMMARY));
+                try {
+                    getActivity().startActivity(new Intent(Intent.ACTION_POWER_USAGE_SUMMARY));
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "Cannot open Battery Usage", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

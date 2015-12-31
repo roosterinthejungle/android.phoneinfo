@@ -124,22 +124,6 @@ public class Utils {
     }
 
     /**
-     * Start activity
-     *
-     * @param context
-     * @param intent
-     * @return
-     */
-    public static boolean startActivity(Context context, Intent intent) {
-        try {
-            context.startActivity(intent);
-            return true;
-        } catch (ActivityNotFoundException e) {
-            return false;
-        }
-    }
-
-    /**
      * Check if app has specific permission granted
      *
      * @param context
